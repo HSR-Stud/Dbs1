@@ -3,13 +3,30 @@
 % Standard Header für Zusammenfassungen verwenden.
 \input{header/zusammenfassung}
 
+\usepackage{listings}
+
+\lstdefinestyle{customJava}{
+  numbers=left,
+  belowcaptionskip=1\baselineskip,
+  breaklines=true,
+  frame=L,
+  xleftmargin=\parindent,
+  language=Java,
+  showstringspaces=false,
+  basicstyle=\footnotesize\ttfamily,
+  keywordstyle=\bfseries\color{green!40!black},
+  commentstyle=\itshape\color{purple!40!black},
+  identifierstyle=\color{blue},
+  stringstyle=\color{orange},
+  numberstyle=\ttfamily\tiny
+}
+
 \setDefaultArrayStretch{2}
 
 % Titel und Autor
 \title{Datenbanksysteme 1}
 \subtitle{Dozent: S. Keller}
-
-
+\author{Grauer Bernhard, Koeppel Damian}
 
 \begin{document}
 \begin{titlepage}
@@ -23,5 +40,6 @@
 
 \input{sections/basics.tex}
 \input{sections/model.tex}
+\input{sections/jdbc.tex}
 
 \end{document}
