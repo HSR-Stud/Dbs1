@@ -1,0 +1,33 @@
+\section{SQL}
+\subsection{Data Definition Language (DDL)}
+\subsubsection{Basisdatentypen}
+\begin{description}
+    \item[BOOLEAN] Boolscher Datentyp
+    \item[SMALLINT] Ganzzahl (2 Byte)
+    \item[INT / INTEGER] Ganzzahl (4 Byte)
+    \item[BIGINT] Ganzzahl (8 Byte)
+    \item[REAL, FLOAT, DOUBLE] Fliesskomma-Zahl (8 Byte)
+    \item[NUMERIC (precision, scale), DECIMAL(precision, scale)] Festkommazahl
+    \item[CHAR(size), CHARACTER(size)] String mit fixer Länge
+    \item[VARCHAR(size)] String mit variabler Länge
+    \item[DATE] Jahr, Monat, Tag
+    \item[TIME] Stunde, Minute, Sekunde
+    \item[INTERVAL] Zeitintervall
+    \item[DATETIME] DATE + TIME
+    \item[BINARY, VARBINARY, LONGBINARY] Binäre Datentypen
+    \item[CLOB, BLOB] Grosse Text- / Binärdaten
+\end{description}
+Spezelles bei PostgreSQL:
+\begin{itemize}
+  \item kein FLOAT
+  \item TEXT für Zeichenketten bel. Länge
+  \item kein DATETIME, siehe TIMESTAMP
+\end{itemize}
+
+TODO: ALTER TABLE; CREATE TABLE, DROP TABLE, CREATE INDEX, DROP INDEX \\
+
+\subsection{Data Manipulation Language (DML)}
+
+TODO: INSERT, SELECT, UPDATE, DELETE \\
+TODO: Unterbafragen (NOT) IN, ANY, EXIST, ALL \\
+TODO: Mengenoperatoren UNION, MINUS; INTERSECT \\
