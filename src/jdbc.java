@@ -1,30 +1,29 @@
 public class A1_Transaktion {
-
 	public static void main(String[] args) {
 		final String user = "anguser";
 		final String password = "angproj";
 		final String database = "jdbc:postgresql://localhost/angproj";
-
-		try (Connection connection = DriverManager.getConnection(database,
-				user, password)) {
-
+		try (Connection connection = DriverManager.getConnection(database,user, password)) {
 			try(Statement stmt = connection.createStatement()) {
 				connection.setAutoCommit(false);
 				connection.setTransactionIsolation(Connection.TRANSACTION_SERIALIZABLE);
-				stmt.execute("INSERT INTO angestellter VALUES (4242, 'Meier, Martha', 424, 12000.00, NULL, 1, 'Rapperswil', current_date, 0.00)");
-				stmt.execute("UPDATE angestellter SET chef=4242 WHERE chef=1001");
+				stmt.execute("INSERT INTO ang VALUES (42, 'Meier, Max', 42)");
+				stmt.execute("UPDATE ang SET chef=42 WHERE chef=11");
+				stmt.executeUpdate("DROP TABLE Wegdamit"); //Also valid for CREATE INSERT DELETE
+				ResultSet rs = stmt.executeQuery("SELECT * FROM Nochda");
+				while(rs.next()){	
+					String sbuff = rs.getString(1);
+					System.out.println(sbuff);
+				}
 				//Batch Upddate
-				stmt.addBatch("UPDATE projekt SET projleiter=4242 WHERE projleiter=1001");
-				stmt.addBatch("DELETE FROM projektzuteilung WHERE persnr=1001");
-				stmt.addBatch("DELETE FROM angestellter WHERE name = 'Marxer, Markus'");
+				stmt.addBatch("UPDATE projekt SET leiter=42 WHERE leiter=11");
+				stmt.addBatch("DELETE FROM zuteilung WHERE persnr=11");
 				stmt.executeBatch();
-				
 				connection.commit();
 			} catch (SQLException ex) {
 				System.err.println(ex.getMessage() +"\nRollback...");
 				connection.rollback();
 			}
-			
 		} catch (SQLException ex) {
 			System.err.println("SQLException: " + ex.getMessage());
 		}

@@ -1,3 +1,47 @@
 \section{JDBC}
 
+\subsection{Type Mapping}
+\begin{tabular}{|l|l|}
+    \hline
+    \textbf{Datenbanktyp} & \textbf{Java Datentyp} \\
+    \hline
+    CHAR, VARCHAR, LONGVARCHAR & String \\
+    \hline
+    BIT, BOOLEAN &  boolean \\
+    \hline
+    INTEGER & int \\
+    \hline
+    BIGINT & long \\
+    \hline
+    REAL & float \\
+    \hline
+    FLOAT, DOUBLE & double \\
+    \hline
+\end{tabular}
+
+\subsection{Transaction Levels}
+\begin{tabular}{|l|c|l|}
+    \hline
+    \textbf{Level} & \textbf{Wert} & \textbf{Beschreibung} \\
+    \hline
+    TRANSCATION\_NONE & 0 & Es werden keine Sperren in der DB gesetzt \\
+    \hline
+    TRANSACTION\_READ\_UNCOMMITTED & 1 & Lesende Transaktionen verursachen keine Sperren. \\
+    \hline
+    TRANSACTION\_READ\_COMMITTED & 2 & Lesende Transaktionen verursachen Sperren \\
+    \hline
+    TRANSACTION\_SERIALIZABLE & 3 & \specialcell{Transaktionen werden geblockt und hintereinander\\ ausgeführt.} \\
+    \hline
+\end{tabular}
+
+\subsection{Metadaten}
+Metadaten geben den JDBC Benutzer Informationen über die Datenbank die im DBMS Schema gespeichert sind.
+\begin{lstlisting}[style=customJava]
+    DatabaseMeataData dbmd = connection.getMeataData();
+    String URL = dbmd.getURL;
+\end{lstlisting}
+
+\subsection{Code Beispiel}
 \lstinputlisting[style=customJava]{src/jdbc.java}
+
+

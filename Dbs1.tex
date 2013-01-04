@@ -3,8 +3,8 @@
 % Standard Header für Zusammenfassungen verwenden.
 \input{header/zusammenfassung}
 
+% Packet für Codelistning und Syntaxhighlighting einstellungen
 \usepackage{listings}
-
 \lstdefinestyle{customJava}{
   numbers=left,
   belowcaptionskip=1\baselineskip,
@@ -21,7 +21,11 @@
   numberstyle=\ttfamily\tiny
 }
 
-\setDefaultArrayStretch{2}
+\setDefaultArrayStretch{1}
+
+%Erzwungener Zeilenumbruch in Tabbelle
+\newcommand{\specialcell}[2][x]{%
+  \begin{tabular}[#1]{@{}l@{}}#2\end{tabular}}
 
 % Titel und Autor
 \title{Datenbanksysteme 1}
