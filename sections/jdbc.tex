@@ -36,7 +36,7 @@
 
 \subsection{Prepared Statement}
 
-\begin{lstlisting}[style=customJava]
+\begin{lstlisting}[style=Java]
     PreparedStatement updateOrt;
     
     String updateString = "UPDATE Dozent SET ort = ?";
@@ -47,12 +47,12 @@
 
 \subsection{Metadaten}
 Metadaten geben den JDBC Benutzer Informationen über die Datenbank die im DBMS Schema gespeichert sind.
-\begin{lstlisting}[style=customJava]
+\begin{lstlisting}[style=Java]
     DatabaseMeataData dbmd = connection.getMeataData();
     String URL = dbmd.getURL;
 \end{lstlisting}
 
 \subsection{Code Beispiel}
-\lstinputlisting[style=customJava]{src/jdbc.java}
+\lstinputlisting[style=Java]{src/jdbc.java}
 
 
