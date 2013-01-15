@@ -1,36 +1,54 @@
 \section{SQL}
-\subsection{Data Definition Language (DDL)}
-\subsubsection{Basisdatentypen}
-\begin{description}
-    \item[BOOLEAN] Boolscher Datentyp
-    \item[SMALLINT] Ganzzahl (2 Byte)
-    \item[INT / INTEGER] Ganzzahl (4 Byte)
-    \item[BIGINT] Ganzzahl (8 Byte)
-    \item[REAL, FLOAT, DOUBLE] Fliesskomma-Zahl (8 Byte)
-    \item[NUMERIC (precision, scale), DECIMAL(precision, scale)] Festkommazahl
-    \item[CHAR(size), CHARACTER(size)] String mit fixer Länge
-    \item[VARCHAR(size)] String mit variabler Länge
-    \item[DATE] Jahr, Monat, Tag
-    \item[TIME] Stunde, Minute, Sekunde
-    \item[INTERVAL] Zeitintervall
-    \item[DATETIME] DATE + TIME
-    \item[BINARY, VARBINARY, LONGBINARY] Binäre Datentypen
-    \item[CLOB, BLOB] Grosse Text- / Binärdaten
-\end{description}
-Spezelles bei PostgreSQL:
-\begin{itemize}
-  \item kein FLOAT
-  \item TEXT für Zeichenketten bel. Länge
-  \item kein DATETIME, siehe TIMESTAMP
-\end{itemize}
-
-TODO: ALTER TABLE; CREATE TABLE, DROP TABLE, CREATE INDEX, DROP INDEX \\
-
-\subsection{Data Manipulation Language (DML)}
-
-TODO: INSERT, SELECT, UPDATE, DELETE \\
-TODO: Unterbafragen (NOT) IN, ANY, EXIST, ALL \\
-TODO: Mengenoperatoren UNION, MINUS; INTERSECT \\
-TODO: Window Fönktschens \\
-TODO: CTE \\
-TODO: CREATE VIEW, DROP VIEW
+    \subsection{Data Definition Language (DDL)}
+    \subsubsection{Basisdatentypen}
+        \begin{description}
+            \item[BOOLEAN] Boolscher Datentyp
+            \item[SMALLINT] Ganzzahl (2 Byte)
+            \item[INT / INTEGER] Ganzzahl (4 Byte)
+            \item[BIGINT] Ganzzahl (8 Byte)
+            \item[REAL, FLOAT, DOUBLE] Fliesskomma-Zahl (8 Byte)
+            \item[NUMERIC (precision, scale), DECIMAL(precision, scale)] Festkommazahl
+            \item[CHAR(size), CHARACTER(size)] String mit fixer Länge
+            \item[VARCHAR(size)] String mit variabler Länge
+            \item[DATE] Jahr, Monat, Tag
+            \item[TIME] Stunde, Minute, Sekunde
+            \item[INTERVAL] Zeitintervall
+            \item[DATETIME] DATE + TIME
+            \item[BINARY, VARBINARY, LONGBINARY] Binäre Datentypen
+            \item[CLOB, BLOB] Grosse Text- / Binärdaten
+        \end{description}
+        Spezelles bei PostgreSQL:
+        \begin{itemize}
+          \item kein FLOAT
+          \item TEXT für Zeichenketten bel. Länge
+          \item kein DATETIME, siehe TIMESTAMP
+        \end{itemize}
+        \subsubsection{Create Table}
+            \lstinputlisting[style=SQL]{src/createtable.sql}
+        \subsubsection{Alter Table}
+            \lstinputlisting[style=SQL]{src/altertable.sql}
+        \subsubsection{Drop Table}
+            \lstinputlisting[style=SQL]{src/droptable.sql}
+        \subsubsection{Create Index}
+            \lstinputlisting[style=SQL]{src/createindex.sql}
+        \subsubsection{Drop Index}
+            \lstinputlisting[style=SQL]{src/dropindex.sql}
+    \subsection{Data Manipulation Language (DML)}
+        \subsubsection{Insert}
+            \lstinputlisting[style=SQL]{src/insert.sql}
+        \subsubsection{Select}
+            \lstinputlisting[style=SQL]{src/select.sql}
+        \subsubsection{Update}
+            \lstinputlisting[style=SQL]{src/update.sql}
+        \subsubsection{Delete}
+            \lstinputlisting[style=SQL]{src/delete.sql}
+        \subsubsection{Copy}
+            \lstinputlisting[style=SQL]{src/copy.sql}
+    TODO: Unterbafragen (NOT) IN, ANY, EXIST, ALL \\
+    TODO: Mengenoperatoren UNION, MINUS; INTERSECT \\
+    TODO: Window Fönktschens \\
+    TODO: CTE \\
+        \subsubsection{Create View}
+            \lstinputlisting[style=SQL]{src/createview.sql}
+        \subsubsection{Drop}
+            \lstinputlisting[style=SQL]{src/dropview.sql}

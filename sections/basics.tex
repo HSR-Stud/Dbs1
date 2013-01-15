@@ -1,25 +1,42 @@
 \section{Basics}
-DBS = DBMS + (n*)DB
-\begin{description}
-\item[DBS] Datenbanksystem
-\item[DBMS] Datenbankmanagementsystem
-\item[DB] Datenbasis
-\end{description}
-TODO: Bild (Dbs1\_Einführung.pdf - S. 12) \\
-TODO: Eigenschaften (Dbs1\_Einführung.pdf - S. 13) \\
-TODO: Anforderungen (Dbs1\_Einführung.pdf - S. 14) \\
-TODO: Funktionen (Dbs1\_Einführung.pdf - S. 15) \\
-
-\subsection{Datenbankmodelle}
-\subsubsection{Hierarchisches Datenbankmodell}
-TODO: Eigenschaften / Nachteile \\
-\subsubsection{Netzwerk-Datenbankmodell}
-TODO: Eigenschaften / Nachteile \\
-\subsubsection{Relationales Datenbankmodell}
-TODO: Eigenschaften / Nachteile \\
-\subsubsection{Postrelationale Datenbankmodelle}
-TODO: Eigenschaften / Nachteile \\
-\section{3-Ebenen-Modell}
-TODO: \ldots \\
-\section{Entwurfsprozess}
-TODO: Bild (Dbs1\_Einführung.pdf - S. 25) \\
+    DBS = DBMS + (n*)DB
+    \begin{description}
+    \item[DBS] Datenbanksystem
+    \item[DBMS] Datenbankmanagementsystem
+    \item[DB] Datenbasis
+    \end{description}
+    \includegraphics[page=13,trim=20 40 20 140,clip=true,width=0.5\textwidth]{images/einfuehrung.pdf}
+    \subsection {DBMS}
+        \subsubsection{Eigenschaften}
+            \begin{itemize}
+              \item Verwaltet zentrale Datenbasis (Datenbank)
+              \item Anwendungen greifen via DBMS auf die Daten zu
+              \item Die Daten sind strukturiert und die Struktur ist im Datenkatalog beschrieben
+              \item Client-Server Struktur
+              \item Sichert Datenintegrität
+              \item Stellt Datenpflege, Datenschutz und Datensicherheit sicher
+            \end{itemize}
+        \subsubsection{Anforderungen}
+           \begin{itemize}
+             \item Redundanzfreiheit
+             \item Datenintegrität (Kosistenz, Sicherheit, Schutz)
+           \end{itemize}
+        \subsubsection{Funktionen}
+            \begin{itemize}
+              \item Transaktionen
+              \item Synchronisation paralleler Zugriffe (Mehrnutzerbetrieb)
+              \item Sicherheit: Authentifizierung, Autorisierung
+              \item Backup und Recovery
+              \item Abfragesprache, Schnittstellen
+            \end{itemize}
+        \subsubsection{Modelle}
+            \begin{itemize}
+                \item Hierarchisches DBM (XML)
+                \item Netzwerk-DBM
+                \item Relationales-DBM (SQL)
+                \item Postrelationale-DBM (OODB)
+            \end{itemize}
+    \subsection{3-Ebenen-Modell}
+        \includegraphics[page=22,trim=20 40 20 100,clip=true,width=0.5\textwidth]{images/einfuehrung.pdf}
+    \subsection{Entwurfsprozess}
+        \includegraphics[page=26,trim=20 20 20 85,clip=true,width=0.5\textwidth]{images/einfuehrung.pdf}
