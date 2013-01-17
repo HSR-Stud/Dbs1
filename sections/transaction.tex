@@ -1,5 +1,13 @@
 \section{Transaction}
-    TODO: ACID (Atomicity, Consistency, Isolation, Durability) \\
+    \subsection{ACID}
+    \begin{description}
+    \setlength{\itemsep}{0pt} 
+        \item[Atomicity] Folge von Operationen entweder ganz oder gar nicht ausgeführt
+        \item[Consistency] Integritätsbedingungen gelten nach Ausführung jeder Folge von Operationen
+        \item[Isolation] Folge von Operationen werden ohne sichtbare Verzahnung oder Parallelität ausgeführt
+        \item[Durability] Alle Änderungen sind nach Ausführung im persistenten Speicher abgelegt
+    \end{description}
+    
     \subsection{SQL}
         \subsubsection{Transaction}
             \lstinputlisting[style=SQL]{src/transaction.sql}
