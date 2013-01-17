@@ -1,13 +1,15 @@
 \section{SQL}
+    \begin{multicols}{2}
     \subsection{Data Definition Language (DDL)}
     \subsubsection{Basisdatentypen}
         \begin{description}
+        \setlength{\itemsep}{0pt}
             \item[BOOLEAN] Boolscher Datentyp
             \item[SMALLINT] Ganzzahl (2 Byte)
             \item[INT / INTEGER] Ganzzahl (4 Byte)
             \item[BIGINT] Ganzzahl (8 Byte)
             \item[REAL, FLOAT, DOUBLE] Fliesskomma-Zahl (8 Byte)
-            \item[NUMERIC (precision, scale), DECIMAL(precision, scale)] Festkommazahl
+            \item[NUMERIC, DECIMAL (beide: precision, scale)] Festkommazahl
             \item[CHAR(size), CHARACTER(size)] String mit fixer Länge
             \item[VARCHAR(size)] String mit variabler Länge
             \item[DATE] Jahr, Monat, Tag
@@ -19,6 +21,7 @@
         \end{description}
         Spezelles bei PostgreSQL:
         \begin{itemize}
+        \setlength{\itemsep}{0pt}  
           \item kein FLOAT
           \item TEXT für Zeichenketten bel. Länge
           \item kein DATETIME, siehe TIMESTAMP
@@ -52,3 +55,4 @@
             \lstinputlisting[style=SQL]{src/createview.sql}
         \subsubsection{Drop}
             \lstinputlisting[style=SQL]{src/dropview.sql}
+    \end{multicols}
