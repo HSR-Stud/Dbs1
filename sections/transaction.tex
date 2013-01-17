@@ -9,9 +9,37 @@
     \end{description}
     
     \subsection{SQL}
+        \begin{multicols}{2}
         \subsubsection{Transaction}
             \lstinputlisting[style=SQL]{src/transaction.sql}
         \subsubsection{Savepoint}
-            \lstinputlisting[style=SQL]{src/savepoint.sql}
-    TODO: Serialisierbarkeit, Isolation Levels \\
-    TODO: Isolationsverfahren (Transaktionen\_Fortsetzung.pdf , S. 43)
+            \lstinputlisting[style=SQL]{src/savepoint.sql}   
+    \subsection{Serialisierbarkeit}
+    Ziel: Azyklischer Informationsfluss zwischen Transaktionen sicherstellen
+    \begin{itemize}
+    \setlength{\itemsep}{0pt}
+        \item Transaktion $T_A$ kann Information von $T_B$ sehen oder überschrieben - aber nicht auch noch umgekehrt
+        \item Muss auch transitiv azyklisch sein
+    \end{itemize}
+    \end{multicols}
+    \subsection{Isolationsverfahren}
+    \begin{tabular}{|l|c|c|c|c|c|c|}
+        \hline
+        & Serialisierbar & \specialcell{Keine\\ Deadlocks} & \specialcell{Keine\\ Cascading\\ Rollbacks} & \specialcell{Keine\\ Konflikt-\\ Rollback} & \specialcell{Hohe\\ Parallelität} & Realistisch \\
+        \hline
+        2-Phase Locking & \tick & \cross & \cross & \tick & \cross & \cross \\
+        \hline
+        Strict 2PL & \tick & \cross & \tick & \tick & \cross & \tick \\
+        \hline
+        Preclaiming 2PL & \tick & \tick & \tick & \tick & \cross & \cross \\
+        \hline
+        Validation-Based & \tick & \tick & \cross & \cross & \tick & \tick \\
+        \hline
+        Timestamp-Based & \tick & \tick & \cross & \cross & \tick & \tick \\ 
+        \hline
+        Snapshot Isolation & \cross & \cross & \tick & \cross & \tick & \tick \\
+        \hline
+        SSI & \tick & \cross & \tick & \cross & \tick & \tick \\
+        \hline
+    \end{tabular}
+    

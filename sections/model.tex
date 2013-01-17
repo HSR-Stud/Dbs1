@@ -13,7 +13,7 @@
                 \item[Relation] beschreibt eine Entitätsmenge
                 \item[Tupel] repräsentiert eine Entität
             \end{description}
-            \includegraphics[page=42,trim=10 30 0 84,clip=true,width=0.5\textwidth]{images/datenmodellierung.pdf}
+            \includegraphics[page=42,trim=10 30 0 84,clip=true,width=0.45\textwidth]{images/datenmodellierung.pdf}
     \end{multicols}    
     \subsubsection{Schlüssel}
     \begin{description}
@@ -25,14 +25,14 @@
     \end{description}
     \subsection{Relationale Schreibweise}
         \subsubsection{Tabellen}
-            \begin{lstlisting}
+            \begin{lstlisting}[style=SQL]
 TableName (
     Attr1 [Type] [PK] [NOT NULL|NULL] [UNIQUE] [REFERENCES TabName(Attr)],
-    ...,
-    
+    ...,    
     [PRIMARY KEY CONSTRAINT(Attr1, Attr2, ...)]
 )
             \end{lstlisting}
+            \begin{multicols}{2}
             \subsubsection{Attribut-Datentypen}
                 \begin{itemize}
                 \setlength{\itemsep}{0pt}  
@@ -51,5 +51,6 @@ TableName (
                         \item 1. Normalform, optionale Attibute mittels NULL
                         \item mindestens einen Primärschüssel
                     \end{itemize}
+            \end{multicols}                    
                 \paragraph{Abbildung von Assoziationen und Aggregationen}
                 \paragraph{Abbildung von Generalisierungen}
