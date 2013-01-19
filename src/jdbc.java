@@ -13,8 +13,7 @@ public class A1_Transaktion {
 				ResultSet rs = stmt.executeQuery("SELECT * FROM Nochda");
 				while(rs.next()){	
 					String sbuff = rs.getString(1);
-					System.out.println(sbuff);
-				}
+					System.out.println(sbuff);}
 				//Batch Upddate
 				stmt.addBatch("UPDATE projekt SET leiter=42 WHERE leiter=11");
 				stmt.addBatch("DELETE FROM zuteilung WHERE persnr=11");
@@ -22,8 +21,7 @@ public class A1_Transaktion {
 				connection.commit();
 			} catch (SQLException ex) {
 				System.err.println(ex.getMessage() +"\nRollback...");
-				connection.rollback();
-			}
+				connection.rollback();}
 		} catch (SQLException ex) {
 			System.err.println("SQLException: " + ex.getMessage());
 		}
