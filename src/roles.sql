@@ -1,0 +1,6 @@
+CREATE ROLE user WITH LOGIN PASSWORD 'password';
+
+CREATE ROLE AngProj WITH LOGIN PASSWORD 'AngProj'; 
+GRANT INSERT ON TABLE "Angestellter" TO "AngProj";
+
+DROP ROLE AngProj;
