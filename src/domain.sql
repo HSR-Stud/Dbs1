@@ -7,4 +7,4 @@ where constraint is:
 [ CONSTRAINT constraint_name ]
 { NOT NULL | NULL | CHECK (expression) }
 
-DROP DOMAIN [ IF EXISTS ] name [, ...] [ CASCADE | RESTRICT ]
+DROP DOMAIN [ IF EXISTS ] name [, ...]

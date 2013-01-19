@@ -1,2 +1,8 @@
 INSERT INTO table [ ( column [, ...] ) ]
-    { DEFAULT VALUES | VALUES ( { expression | DEFAULT } [, ...] ) }
+    { 
+      DEFAULT VALUES | 
+      VALUES (
+        { expression | DEFAULT }
+        [, ...]
+      ) 
+    }

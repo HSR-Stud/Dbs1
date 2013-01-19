@@ -7,11 +7,17 @@ ALTER TABLE name
 
 where action is one of:
 
-    ADD [ COLUMN ] column type [ column_constraint [ ... ] ]
-    DROP [ COLUMN ] column [ RESTRICT | CASCADE ]
-    ALTER [ COLUMN ] column TYPE type
-    ALTER [ COLUMN ] column SET DEFAULT expression
-    ALTER [ COLUMN ] column DROP DEFAULT
-    ALTER [ COLUMN ] column { SET | DROP } NOT NULL
+    ADD [ COLUMN ] column
+      type [ column_constraint [ ... ] ]
+    DROP [ COLUMN ] column
+      [ RESTRICT | CASCADE ]
+    ALTER [ COLUMN ] column
+      TYPE type
+    ALTER [ COLUMN ] column
+      SET DEFAULT expression
+    ALTER [ COLUMN ] column
+      DROP DEFAULT
+    ALTER [ COLUMN ] column
+      { SET | DROP } NOT NULL
     ADD table_constraint
-    DROP CONSTRAINT constraint_name [ RESTRICT | CASCADE ]
+    DROP CONSTRAINT constraint_name
